@@ -7,6 +7,8 @@ import com.rongyi.demo.utils.Constants;
 import com.rongyi.demo.utils.ResponseCode;
 import com.rongyi.demo.vo.SignUpVo;
 import org.apache.ibatis.annotations.Param;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
@@ -29,6 +31,7 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     SignUpService service;
+    Logger logger = LoggerFactory.getLogger(LoginController.class);
 
 
     /**
@@ -69,7 +72,7 @@ public class LoginController {
     @RequestMapping(value = "/signUpforPhone")
     public Map<String, String> signUpForPhone(@Valid SignUpVo signUpVo, HttpServletRequest request, HttpServletResponse response) {
         Map<String, String> map = new HashMap();
-
+        logger.info("进入到手机注册");
             signUpVo.setSignupMethod(Constants.SIGNUP_METHOD_PHONE);
             Boolean auth = service.authSign(Constants.SIGNUP_METHOD_PHONE, signUpVo);
             if (auth) {
