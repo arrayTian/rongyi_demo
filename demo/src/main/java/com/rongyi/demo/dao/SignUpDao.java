@@ -17,7 +17,7 @@ public interface SignUpDao {
     @Insert("insert into demo_user_info(user_mail,user_password,signup_method,user_number) values(#{userMail},#{userPassword},#{signupMethod},#{userNumber})")
     Integer insertSignUpInfo4Mail(SignUpVo signUpVo);
 
-    @Insert("insert into demo_user_info(user_phone,user_password,signup_method,user_number) values(#{userphone},#{userPassword},#{signupMethod},#{userNumber})")
+    @Insert("insert into demo_user_info(user_phone,user_password,signup_method,user_number) values(#{userPhone},#{userPassword},#{signupMethod},#{userNumber})")
     Integer insertSignUpInfo4Phone(SignUpVo signUpVo);
 
     @Select("select count(1) from demo_user_info")
