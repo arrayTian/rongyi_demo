@@ -21,7 +21,6 @@ import java.util.Objects;
 public class SignUpServiceImpl implements SignUpService {
     @Autowired
     SignUpDao signUpDao;
-
     /**
      * 功能描述:
      *
