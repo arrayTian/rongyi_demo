@@ -1,7 +1,8 @@
 package com.rongyi.demo.entity;
 
 
-import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -12,7 +13,8 @@ public class ClientInfo {
     String clientPhone;
     String clientName;
     String clientSex;
-    @JSONField(format = "yyyy-MM")
+    @DateTimeFormat(pattern = "yyyy-MM")
+    @JsonFormat(pattern="yyyy-MM")
     Date clientBirthdayDate;
     String clientNationality;
     String clientAddress;

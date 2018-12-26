@@ -15,10 +15,7 @@ public interface ClientInfoMapper {
     List<ClientInfo> searchLike(String searchName);
     List<ClientInfo> findClientInfoPhone(String clientInfoPhone);
     List<ClientInfo> findClientInfoEmail(String clientInfoEmail);
-
     public int insertUser(ClientInfo client);
 
-   /* public int delete(int id);
-    public int Update(ClientInfo client);*/
 }
 

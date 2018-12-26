@@ -1,8 +1,23 @@
 package com.rongyi.demo.noticeMessage;
 
+import com.rongyi.demo.entity.ClientInfo;
+
+import java.util.List;
+
 public class Message {
     private String code;
-    private String data;
+    private List<ClientInfo> data;
+    private String MyName;
+
+
+
+    public String getMyName() {
+        return MyName;
+    }
+
+    public void setMyName(String myName) {
+        MyName = myName;
+    }
 
     public String getCode() {
         return code;
@@ -12,11 +27,11 @@ public class Message {
         this.code = code;
     }
 
-    public String getData() {
+    public List<ClientInfo> getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(List<ClientInfo> data) {
         this.data = data;
     }
 
@@ -24,7 +39,8 @@ public class Message {
     public String toString() {
         return "Message{" +
                 "code='" + code + '\'' +
-                ", Data='" + data + '\'' +
+                ", data=" + data +
+                ", MyName='" + MyName + '\'' +
                 '}';
     }
 }

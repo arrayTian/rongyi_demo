@@ -55,11 +55,9 @@ public class ClientInfoController {
     @RequestMapping(value = "/insertUser", method = {RequestMethod.POST})
     @ResponseBody
     public Message insertUser(HttpServletRequest request,ClientInfo clientInfo){
-    /*public Message insertUser(HttpServletRequest request, String userName, String userSex,
-                              String userBirth, String userGuoji, String userAddress
-                             , String userPhone, String userEmail) {*/
+       
+
         return implClientInfoService.insertUser(request,clientInfo);
-       // return implClientInfoService.insertUser(request, userName, userSex, userBirth, userGuoji, userAddress, userPhone, userEmail);
     }
 
     @RequestMapping(value = "/seachMyClient", method = {RequestMethod.POST})
