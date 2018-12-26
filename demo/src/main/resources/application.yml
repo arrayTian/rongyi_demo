@@ -8,6 +8,7 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
     cache: false
+    servlet:
     content-type: text/html
     enabled: true
     encoding: UTF-8
@@ -48,7 +49,10 @@ mybatis:
   type-aliases-package: com.rongyi.demo.entity  # 注意：对应实体类的路径
 
   #show SQL in logMessage
-
+multipart:
+  enabled: true
+  max-file-size: 50mb
+  max-request-size: 50mb
 
 logging:
   level:
