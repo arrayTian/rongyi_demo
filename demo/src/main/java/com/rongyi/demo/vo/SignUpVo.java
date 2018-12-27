@@ -18,7 +18,7 @@ public class SignUpVo {
 
     //@Pattern(="^(?=.*[0-9].*)(?=.*[A-Z].*)(?=.*[a-z].*).{6,20}$")
     //@Pattern(regexp = "^(?=.*[0-9].*)(?=.*[A-Z].*)(?=.*[a-z].*).{6,20}$")
-    //@NotEmpty
+    @NotEmpty
     public String userPassword;
 
     @Email
