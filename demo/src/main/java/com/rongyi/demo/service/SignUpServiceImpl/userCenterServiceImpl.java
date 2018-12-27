@@ -19,9 +19,9 @@ public class userCenterServiceImpl implements UserCenterService {
     @Autowired
     userInfoDao userinfoDao;
     @Override
-    public List getUserInfo(String userMail) {
-       List<User> userInfo =  userinfoDao.userInfo(userMail);
-
+    public User getUserInfo(String userMail) {
+       User userInfo =  userinfoDao.userInfo(userMail);
+        System.out.println(userInfo.toString());
         return userInfo;
     }
 
