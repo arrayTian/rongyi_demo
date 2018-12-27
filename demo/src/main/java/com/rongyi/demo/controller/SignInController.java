@@ -1,20 +1,14 @@
 package com.rongyi.demo.controller;
 
-import com.rongyi.demo.entity.User;
-import com.rongyi.demo.exception.GlobalException;
 import com.rongyi.demo.service.SignUpService;
 import com.rongyi.demo.utils.Constants;
 import com.rongyi.demo.utils.ResponseCode;
 import com.rongyi.demo.vo.SignUpVo;
-import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,10 +22,10 @@ import java.util.Map;
  * @Date:2018/12/20 15：51
  */
 @Controller
-public class LoginController {
+public class SignInController {
     @Autowired
     SignUpService service;
-    Logger logger = LoggerFactory.getLogger(LoginController.class);
+    Logger logger = LoggerFactory.getLogger(SignInController.class);
 
 
     /**

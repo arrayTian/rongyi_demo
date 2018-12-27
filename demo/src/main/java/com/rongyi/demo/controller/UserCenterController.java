@@ -1,6 +1,6 @@
 package com.rongyi.demo.controller;
 
-import com.rongyi.demo.service.SignUpService;
+import com.rongyi.demo.entity.User;
 import com.rongyi.demo.service.UserCenterService;
 import com.rongyi.demo.utils.ResponseCode;
 import org.slf4j.Logger;
@@ -32,7 +32,7 @@ public class UserCenterController {
         HttpSession session = request.getSession();
         String userName = (String) session.getAttribute("user");
         logger.info("取到的session值为："+userName);
-        List userInfo = userCenterService.getUserInfo(userName);
+        User userInfo = userCenterService.getUserInfo(userName);
         Map map = new HashMap<String, String>();
         map.put("resultCode", ResponseCode.SUCCESS_RESPONSE_0000);
         map.put("param",userInfo);
